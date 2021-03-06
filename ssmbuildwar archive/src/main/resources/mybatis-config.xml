@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+<!--配置数据源,交给spring去做-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <typeAliases>
+        <package name="com.zsj.pojo"/>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+    <mappers>
+        <mapper class="com.zsj.dao.BookMapper"/>
+        <mapper class="com.zsj.dao.admin.StudentMapper"/>
+        <mapper class="com.zsj.dao.user.LoginMapper"/>
+        <mapper class="com.zsj.dao.teacher.TeacherMapper"/>
+    </mappers>
+    
+
+</configuration>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zsj.dao.teacher.TeacherMapper">
+    <insert id="addTeacher" parameterType="Teacher">
+        insert into myteach.teacher (userid,t_name,t_school,free_time,zhuanye,gaozhong,detail,subject)
+        VALUES (#{userid},#{t_name},#{t_school},#{free_time},#{zhuanye},#{gaozhong},#{detail},#{subject})
+    </insert>
+
+    <update id="update" parameterType="Teacher">
+        update myteach.teacher
+        set t_name=#{t_name},t_school=#{t_school},free_time=#{free_time},zhuanye=#{zhuanye},gaozhong=#{gaozhong},detail=#{detail},subject=#{subject}
+        where userid=#{userid};
+    </update>
+    <select id="queryTeacherById" resultType="Teacher">
+        select * from myteach.teacher where userid=#{userid}
+    </select>
+
+    <delete id="deleteTeacherById" parameterType="int">
+        delete from myteach.teacher where userid=#{userid}
+    </delete>
+    <select id="queryAllTaecher" resultType="Teacher">
+        select * from myteach.teacher
+    </select>
+
+
+</mapper>

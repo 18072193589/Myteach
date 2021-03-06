@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zsj.dao.user.LoginMapper">
+    <select id="Logincheak" parameterType="User">
+        select count(*) from myteach.user where username=#{username} and password=#{password}
+    </select>
+    <select id="Loginfindpwd" resultType="String">
+        select myteach.user.password from myteach.user where username=#{username}
+    </select>
+    <select id="Loginfindpwd2" resultType="String">
+        select myteach.user.userid from myteach.user where username=#{username}
+    </select>
+    <insert id="register" parameterType="User">
+        insert into myteach.user (username, password) VALUES (#{username},#{password})
+    </insert>
+    <select id="registerByusername" parameterType="String">
+        select count(*) from myteach.user where username=#{username}
+    </select>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Response" />
+      </profile>
+      <profile name="Annotation profile for Servlet-01 Maven Webapp" enabled="true">
+        <sourceOutputDir name="../Response/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../Response/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Servlet-02" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Servlet-02" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
